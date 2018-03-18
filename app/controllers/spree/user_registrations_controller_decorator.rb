@@ -1,4 +1,4 @@
-Spree::UserRegistrationsController.class_eval do
+Users::RegistrationsController.class_eval do
 
   before_action :check_referral_and_affiliate, only: :create
   after_action :reset_referral_session, only: :create
