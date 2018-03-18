@@ -28,7 +28,7 @@ User.class_eval do
   end
 
   def affiliate?
-    !try.(referred_record).try(:affiliate).nil?
+    !self.try.(referred_record).try(:affiliate).nil?
   end
 
   def associated_partner

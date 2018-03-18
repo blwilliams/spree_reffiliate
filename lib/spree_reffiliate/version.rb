@@ -11,7 +11,7 @@ module SpreeReffiliate
     MAJOR = 3
     MINOR = 4
     TINY  = 4
-    PRE = 6
+    PRE = 7
 
     STRING = [MAJOR, MINOR, TINY, PRE].compact.join('.')
   end
