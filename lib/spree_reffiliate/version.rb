@@ -9,10 +9,9 @@ module SpreeReffiliate
 
   module VERSION
     MAJOR = 3
-    MINOR = 2
+    MINOR = 4
     TINY  = 0
-    PRE   = 'alpha'
 
-    STRING = [MAJOR, MINOR, TINY, PRE].compact.join('.')
+    STRING = [MAJOR, MINOR, TINY].compact.join('.')
   end
 end
