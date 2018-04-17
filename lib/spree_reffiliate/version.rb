@@ -10,8 +10,8 @@ module SpreeReffiliate
   module VERSION
     MAJOR = 3
     MINOR = 4
-    TINY  = 4
-    PRE = 11
+    TINY  = 5
+    PRE = 1
 
     STRING = [MAJOR, MINOR, TINY, PRE].compact.join('.')
   end
