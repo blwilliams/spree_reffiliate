@@ -32,7 +32,7 @@ User.class_eval do
   end
 
   def associated_partner
-    @associated_partner ||= Spree::Affiliate.find_by(email: email)
+    @associated_partner ||= Spree::Affiliate.find_by(username: username)
   end
 
   def associated_partner?

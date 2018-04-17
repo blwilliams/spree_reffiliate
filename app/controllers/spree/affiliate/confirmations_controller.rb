@@ -27,7 +27,7 @@ module Spree
       end
 
       def load_object
-        @user = Spree::User.find_by(email: @affiliate.email)
+        @user = Spree::User.find_by(username: @affiliate.username)
         redirect_to root_path, error: Spree.t(:user_not_found) unless @user
       end
   end
