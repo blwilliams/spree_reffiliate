@@ -9,7 +9,7 @@ module Spree::TransactionRegistrable
     end
 
     def affiliate_commission_rule_present?(affiliate)
-      if self.class.eql? Spree::User
+      if self.class.eql? User
         commission_rule_id = Spree::CommissionRule.user_registration.try(:id)
       elsif self.class.eql? Spree::Order
         commission_rule_id = Spree::CommissionRule.order_placement.try(:id)
