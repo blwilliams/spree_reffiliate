@@ -15,7 +15,7 @@
       <tbody>
         <% commission_transactions.each do |transaction|%>
           <tr id="<%= spree_dom_id transaction %>" data-hook="admin_transactions_index_rows" class="<%= cycle('odd', 'even')%>">
-            <% if transaction.commissionable_type.eql? 'Spree::User' %>
+            <% if transaction.commissionable_type.eql? 'User' %>
               <td class='transaction_name'><%= transaction.commissionable.email %></td>
             <% elsif transaction.commissionable_type.eql? 'Spree::Order' %>
               <td class='transaction_name'><%= transaction.commissionable.number %></td>

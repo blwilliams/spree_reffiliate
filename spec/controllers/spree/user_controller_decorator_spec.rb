@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Spree::UsersController, type: :controller do
+describe UsersController, type: :controller do
   let(:email) { 'mynew@email-address.com' }
   let(:admin_user) { create(:user) }
   let(:user) { create(:user, email: email) }
@@ -13,7 +13,7 @@ describe Spree::UsersController, type: :controller do
   before do
     allow(controller).to receive(:spree_current_user) { user }
     allow(Spree::Affiliate).to receive(:find_by) { affiliate }
-    allow(Spree::User).to receive(:find_by) { user }
+    allow(User).to receive(:find_by) { user }
     allow(user).to receive(:can_activate_associated_partner=) { true }
     allow(affiliate).to receive(:email) { email }
   end

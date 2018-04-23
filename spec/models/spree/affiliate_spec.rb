@@ -74,7 +74,7 @@ describe Spree::Affiliate, type: :model do
           @affiliate = Spree::Affiliate.create(email: email, name: 'test', path: 'path')
         end
 
-        it { expect(Spree::User.find_by(email: email).spree_roles.where(name: 'affiliate').count).to eq 1 }
+        it { expect(User.find_by(email: email).spree_roles.where(name: 'affiliate').count).to eq 1 }
       end
 
       context 'when does not have affiliate role' do
@@ -82,7 +82,7 @@ describe Spree::Affiliate, type: :model do
           @affiliate = Spree::Affiliate.create(email: email, name: 'test', path: 'path')
         end
 
-        it { expect(Spree::User.find_by(email: email).spree_roles.where(name: 'affiliate').count).to eq 1 }
+        it { expect(User.find_by(email: email).spree_roles.where(name: 'affiliate').count).to eq 1 }
       end
     end
 
@@ -95,7 +95,7 @@ describe Spree::Affiliate, type: :model do
           @affiliate = Spree::Affiliate.create(email: email, name: 'test', path: 'path')
         end
 
-        it { expect(Spree::User.find_by(email: email).spree_roles.where(name: 'affiliate').count).to eq 1 }
+        it { expect(:User.find_by(email: email).spree_roles.where(name: 'affiliate').count).to eq 1 }
       end
 
       context 'when does not have affiliate role' do
@@ -103,7 +103,7 @@ describe Spree::Affiliate, type: :model do
           @affiliate = Spree::Affiliate.create(email: email, name: 'test', path: 'path')
         end
 
-        it { expect(Spree::User.find_by(email: email).spree_roles.where(name: 'affiliate').count).to eq 1 }
+        it { expect(User.find_by(email: email).spree_roles.where(name: 'affiliate').count).to eq 1 }
       end
     end
   end

@@ -1,7 +1,7 @@
 require 'spec_helper'
 describe Spree::Affiliate::ConfirmationsController, type: :controller do
   stub_authorization!
-  let!(:user) { double(Spree::User).as_null_object }
+  let!(:user) { double(User).as_null_object }
 
 
   describe '#new' do
@@ -9,7 +9,7 @@ describe Spree::Affiliate::ConfirmationsController, type: :controller do
       @affiliate = double(Spree::Affiliate)
       allow(Spree::Affiliate).to receive(:find_by).and_return(@affiliate)
       allow(@affiliate).to receive(:email).and_return('test@vinsol.com')
-      allow(Spree::User).to receive(:find_by).and_return(user)
+      allow(User).to receive(:find_by).and_return(user)
     end
 
     def send_request(options = {})
@@ -35,7 +35,7 @@ describe Spree::Affiliate::ConfirmationsController, type: :controller do
     context 'when affiliate found' do
       context 'when user not found' do
         before do
-          allow(Spree::User).to receive(:find_by).and_return(nil)
+          allow(User).to receive(:find_by).and_return(nil)
         end
 
         it "expect to redirect" do

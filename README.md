@@ -58,7 +58,7 @@ Referral path is `/r/:code` and Affiliate path (assigned in the admin) is `/a/:p
 
 Once installed, you'll be able to access the following methods.
 
-#### Spree::User
+#### User
 + referred_by => user record
 + referral_count => user count
 + referred? => boolean
