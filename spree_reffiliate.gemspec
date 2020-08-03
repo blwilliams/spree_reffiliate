@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
   s.files        = `git ls-files`.split($/)
   s.test_files   = s.files.grep(%r{^spec/})
   s.require_path = 'lib'
-  spree_version  = '>= 3.2.0', '< 4.1.7'
+  spree_version  = '>= 3.2.0', '<= 4.1.7'
 
   s.add_dependency 'spree_core', spree_version
 
